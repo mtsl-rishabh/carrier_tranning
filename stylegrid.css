@@ -1,0 +1,80 @@
+:root {
+    --main-radius: 5px;
+    --main-padding: 5px;
+  }
+  
+  body {
+    font-family: "Inter", sans-serif;
+  }
+  
+  .container {
+    display: grid;
+    height: 90vh;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 0.2fr 1.5fr 1.2fr 0.8fr;
+    grid-template-areas:
+      "nav nav nav nav"
+      "sidebar main main main"
+      "footer footer footer footer";
+    grid-gap: 0.2rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    font-size: 12px;
+    color: #004d40;
+    text-align: center;
+  }
+  
+  nav {
+    background: #a7ffeb;
+    grid-area: nav;
+    height: 100px;
+    font-size: medium;
+    
+  }
+  
+  main {
+    background: #84ffff;
+    grid-area: main;
+    font-size: 24px;
+    height: 300px;
+  
+  }
+  
+  #sidebar {
+    background: #18ffff;
+     grid-area: sidebar; 
+     font-size: 24px;
+    height: 300px;
+    
+  }
+  
+ 
+  
+  footer {
+    background: #1de9b6;
+    grid-area: footer;
+    font-size: 24px;
+    height: 100px;
+
+  }
+  main>section {
+    display: none;
+  }
+  
+  :target {
+    display: block;
+  }
+
+  
+  @media only screen and (max-width: 550px) {
+    .container {
+      grid-template-columns: 1fr;
+
+      grid-template-areas:
+        "nav"
+        "sidebar"
+        "main"
+        "footer";
+    }
+  }
+  
