@@ -14,9 +14,9 @@ function num(n1:Number){
 let result1 = num(30);
 console.log(result1)//return number
 
-function bool(n1){
-    return n1;
-}
+// function bool(n1){
+//     return n1;
+// }
 
-let result2 =bool(true);
-console.log(result2)//return string
+// let result2 =bool(true);
+// console.log(result2)//return string
